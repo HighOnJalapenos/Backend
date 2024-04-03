@@ -69,10 +69,12 @@ const registerUser = asyncHandler(async (req, res) => {
     );
 });
 
-export { registerUser };
+const loginUser = asyncHandler(async (req, res) => {});
+
+export { registerUser, loginUser };
 
 /* 
-Steps:
+Register user steps:
 1. Get user details (required in userSchema)
 2. Validation - check if not empty data is received
 3. Check if user already exists - use username or email or both
@@ -82,4 +84,13 @@ Steps:
 7. remove password and refresh token field from response
 8. check for user creation
 9. return res
+*/
+
+/*
+Login user steps:
+1. get data from req
+2. username or email
+3. find user
+4. password check
+
 */
